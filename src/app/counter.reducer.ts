@@ -5,12 +5,12 @@ export const initialState = 0;
 
 const _counterReducer = createReducer(
   initialState,
-  on(increment, (state, props) => {
+  on(increment, (state: number, props) => {
     console.log(props.message);
     return state + 1;
   }),
-  on(decrement, (state) => state - 1),
-  on(reset, (state) => 0)
+  on(decrement, (state: number) => state - 1),
+  on(reset, (state: number) => 0)
 );
 
 export function counterReducer(state: number, action: Action): number {
