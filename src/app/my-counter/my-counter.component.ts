@@ -16,7 +16,7 @@ export class MyCounterComponent {
   }
 
   increment(): void {
-    this.store.dispatch(increment());
+    this.store.dispatch(increment({message: 'Hello I am a metadata'}));
   }
   decrement(): void {
     this.store.dispatch(decrement());
